@@ -23,18 +23,17 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("data ingestion started")
         try:
-            train_data=pd.read_csv("./experiment/train.csv")
-            test_data=pd.read_csv("./experiment/test.csv")
+            data=pd.read_csv("./experiment/raw.csv") # Reading train data and test data
             logging.info(" reading a df")
 
-            # os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
-            # data.to_csv(self.ingestion_config.raw_data_path,index=False)
-            # logging.info(" i have saved the raw dataset in artifact folder")
+            os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
+            data.to_csv(self.ingestion_config.raw_data_path,index=False)
+            logging.info(" i have saved the raw dataset in artifact folder")
             
-            # logging.info("here i have performed train test split")
+            logging.info("here i have performed train test split")
             
-            # train_data,test_data=train_test_split(data,test_size=0.25)
-            # logging.info("train test split completed")
+            train_data,test_data=train_test_split(data,test_size=0.25)
+            logging.info("train test split completed")
             
             train_data.to_csv(self.ingestion_config.train_data_path,index=False)
             test_data.to_csv(self.ingestion_config.test_data_path,index=False)
@@ -42,16 +41,11 @@ class DataIngestion:
             logging.info("data ingestion part completed")
             
             return (
-                 
-                
                 self.ingestion_config.train_data_path,
                 self.ingestion_config.test_data_path
             )
 
-
-
         except Exception as e:
-            logging.info()
             raise customexception(e,sys)
 
 
