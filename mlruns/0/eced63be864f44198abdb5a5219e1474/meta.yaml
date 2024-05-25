@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Education/MLOPS/MLOPS-project-1/mlruns/0/eced63be864f44198abdb5a5219e1474/artifacts
+end_time: 1716648495769
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eced63be864f44198abdb5a5219e1474
+run_name: delicate-midge-497
+run_uuid: eced63be864f44198abdb5a5219e1474
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716648489349
+status: 3
+tags: []
+user_id: umesh
