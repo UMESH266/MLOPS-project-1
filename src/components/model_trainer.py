@@ -11,11 +11,9 @@ from src.utils.utils import save_object,evaluate_model
 
 from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
 
-
 @dataclass 
 class ModelTrainerConfig:
     trained_model_file_path = os.path.join('artifacts','model.pkl')
-    
     
 class ModelTrainer:
     def __init__(self):
@@ -24,6 +22,7 @@ class ModelTrainer:
     def initate_model_training(self,train_array,test_array):
         try:
             logging.info('Splitting Dependent and Independent variables from train and test data')
+            # Slicing array[row_start:row_end, col_start:col_end] and -1 counting from end
             X_train, y_train, X_test, y_test = (
                 train_array[:,:-1],
                 train_array[:,-1],
@@ -31,6 +30,7 @@ class ModelTrainer:
                 test_array[:,-1]
             )
 
+            # Models selection
             models={
             'LinearRegression':LinearRegression(),
             'Lasso':Lasso(),

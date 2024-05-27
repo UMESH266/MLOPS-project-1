@@ -11,7 +11,8 @@ from pathlib import Path
 
 @dataclass
 class DataIngestionConfig:
-    raw_data_path:str=os.path.join("artifacts","raw.csv")
+    # Creation of paths to store data
+    raw_data_path:str=os.path.join("artifacts","raw.csv") 
     train_data_path:str=os.path.join("artifacts","train.csv")
     test_data_path:str=os.path.join("artifacts","test.csv")
 
@@ -21,24 +22,24 @@ class DataIngestion:
         
 
     def initiate_data_ingestion(self):
-        logging.info("data ingestion started")
+        logging.info("Data ingestion started")
         try:
-            data=pd.read_csv("./experiment/raw.csv") # Reading train data and test data
-            logging.info(" reading a df")
+            data=pd.read_csv("./experiment/raw.csv") # Reading raw data
+            logging.info(" Reading the data")
 
+            # Creation of artifacts directory / folder and store the raw data
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
             data.to_csv(self.ingestion_config.raw_data_path,index=False)
-            logging.info(" i have saved the raw dataset in artifact folder")
+            logging.info(" Saved the raw dataset in artifact folder")
             
-            logging.info("here i have performed train test split")
-            
+            logging.info("Splitting of data as train and test set")
             train_data,test_data=train_test_split(data,test_size=0.25)
-            logging.info("train test split completed")
             
             train_data.to_csv(self.ingestion_config.train_data_path,index=False)
             test_data.to_csv(self.ingestion_config.test_data_path,index=False)
+            logging.info("Saved split data")
             
-            logging.info("data ingestion part completed")
+            logging.info("Data ingestion completed")
             
             return (
                 self.ingestion_config.train_data_path,
@@ -48,8 +49,8 @@ class DataIngestion:
         except Exception as e:
             raise customexception(e,sys)
 
+# # Test script
+# if __name__=="__main__":
+#     obj=DataIngestion()
 
-if __name__=="__main__":
-    obj=DataIngestion()
-
-    obj.initiate_data_ingestion()
+#     obj.initiate_data_ingestion()

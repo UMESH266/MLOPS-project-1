@@ -15,11 +15,11 @@ class customexception(Exception):
         return "Error occured in python script name [{0}] line number [{1}] error message [{2}]".format(
         self.file_name, self.lineno, str(self.error_message))
 
+# Test script
+# if __name__=="__main__":
+#     try:
+#         a=1/0
 
-if __name__=="__main__":
-    try:
-        a=1/0
-
-    except Exception as e:
-        #print(e)
-        raise customexception(e,sys)
+#     except Exception as e:
+#         #print(e)
+#         raise customexception(e,sys)
