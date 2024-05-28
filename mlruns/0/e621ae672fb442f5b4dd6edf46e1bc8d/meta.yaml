@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Education/MLOPS/MLOPS-project-1/mlruns/0/e621ae672fb442f5b4dd6edf46e1bc8d/artifacts
+end_time: 1716876376039
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e621ae672fb442f5b4dd6edf46e1bc8d
+run_name: worried-owl-536
+run_uuid: e621ae672fb442f5b4dd6edf46e1bc8d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716876371951
+status: 3
+tags: []
+user_id: umesh
