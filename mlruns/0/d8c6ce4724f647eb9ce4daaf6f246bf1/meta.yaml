@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Education/MLOPS/MLOPS-project-1/mlruns/0/d8c6ce4724f647eb9ce4daaf6f246bf1/artifacts
+end_time: 1716876513041
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d8c6ce4724f647eb9ce4daaf6f246bf1
+run_name: thundering-duck-317
+run_uuid: d8c6ce4724f647eb9ce4daaf6f246bf1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716876509366
+status: 3
+tags: []
+user_id: umesh
