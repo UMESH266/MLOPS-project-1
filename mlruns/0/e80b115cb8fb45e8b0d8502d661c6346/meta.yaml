@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Education/MLOPS/MLOPS-project-1/mlruns/0/e80b115cb8fb45e8b0d8502d661c6346/artifacts
+end_time: 1716875823330
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e80b115cb8fb45e8b0d8502d661c6346
+run_name: merciful-crow-565
+run_uuid: e80b115cb8fb45e8b0d8502d661c6346
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716875818089
+status: 3
+tags: []
+user_id: umesh
