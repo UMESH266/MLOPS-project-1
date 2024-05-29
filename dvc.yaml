@@ -1,4 +1,4 @@
-stages:
+stages: # Mandatory line
     training:
         cmd: python src/pipeline/training_pipeline.py
         deps:
@@ -14,3 +14,14 @@ stages:
           - artifacts/test.csv
           - artifacts/preprocessor.pkl
           - artifacts/model.pkl
+    """
+    prediction:
+        cmd: python src/pipeline/prediction_pipeline.py
+        deps:
+          - src/pipeline/prediction_pipeline.py
+          - artifacts/preprocessor.pkl
+          - artifacts/model.pkl
+
+        outs:
+          - df
+    """

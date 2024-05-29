@@ -24,7 +24,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Data ingestion started")
         try:
-            data=pd.read_csv("./experiment/raw.csv") # Reading raw data
+            data=pd.read_csv(Path(os.path.join("experiment","raw.csv"))) # Reading raw data
             logging.info(" Reading the data")
 
             # Creation of artifacts directory / folder and store the raw data
