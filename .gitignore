@@ -11,6 +11,7 @@ __pycache__/
 my_env/
 artifacts/
 text.txt
+readme_updater.py
 
 
 # Distribution / packaging
